@@ -19,9 +19,8 @@ ul {
    border-bottom: 1px solid #E7E9FC;
    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);;
 }
-.container{
-    width: 1158px;
-    padding: 0 15px 0 15px;
+.container {
+   
     margin: 0 auto;
 }
 
@@ -114,22 +113,27 @@ address {
 .hero-image {
     background-color: #2e2f42;
     text-align: center;
-    padding: 188px 0;
+    padding: 72px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;
+    max-width: 320px;
+    height: 432px;
     margin: auto;
 }
 .slogan {
-    font-size: 56px;
+    font-size: 36px;
     line-height: 1.07;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 111.111% */
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
     display: inline-block;
     text-align: center;
-    letter-spacing: 0.02em;
     color: #FFFFFF;
-    max-width: 496px;      
+    max-width: 180px;      
 }
 .button {
     background-color: #4d5ae5;
@@ -148,16 +152,18 @@ address {
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin: 48px auto 0;
+    margin: 72px auto 0;
 }
 .button:hover, .button:focus {
     background-color: #404bbf;
 }
 
+.section-one {
+    padding: 96px 16px;
+}
 .features {
-    display: flex;
-    gap: 24px
-
+    display: flex-wrap;
+    gap: 72px 0;
 }
 .visually-hidden {
     position: absolute;
@@ -173,10 +179,13 @@ address {
     overflow: hidden;
 }
 .feature {
-    width: calc((100% - 72px)/4);
+    width: 100%;
+}
+.feature:not(:last-child){
+    margin-bottom: 72px;
 }
 .ben-box {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 112px;
@@ -188,23 +197,36 @@ address {
     margin-bottom: 8px;
 }
 .benefit, .team-member-name, .project-card {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
+    color: var(--NAVY-BLUE, #2E2F42);
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        text-transform: capitalize;
     margin-bottom: 8px;
 }
 .description, .specialty, .type-of-project {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
 }
 .team-section {
     background-color: #f4f4fd;
     text-align: center;
+    padding: 0;
 }
 .team-section > .container, .portfolio-sec > .container{
     text-align: center;
+}
+.team-section>.container {
+    padding: 96px 28px;
+}
+.portfolio-sec>.container {
+    padding: 96px 16px;
 }
 .title-sec {
     font-size: 36px;
@@ -218,6 +240,7 @@ address {
 .team-list, .portfolio-list {
     
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     text-align: center;
 }
@@ -266,6 +289,9 @@ address {
     flex-wrap: wrap;
     row-gap: 48px;
 }
+.project-card {
+    text-align: left;
+}
 .portfolio-discribe {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -273,7 +299,7 @@ address {
     text-align: left;
 }
 .portfolio-element{
-    width: calc((100%-48px)/3);
+    width: 100%;
     margin: auto;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -305,25 +331,24 @@ address {
 }
 .footer{
     background-color: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 16px;
 }
 .footer > .container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
 }
 .footer > .container > .logo-container {
-    margin-right: 120px;
+   text-align: center;
 }
 .footer-logo {
-    margin: 0 0 16px 0;
-
+    margin: 0 auto 16px auto;
 }
 .footer-parag {
     line-height: 1.5;
     color: #f4f4fd;
     letter-spacing: 0.02em;
     width: 264px;
-   
+   text-align: left;
 }
 .footer-logo-studio {
     color: #f4f4fd;
@@ -336,6 +361,10 @@ address {
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
+    margin-top: 72px;
+}
+.social-media-box {
 }
 .social-media-box > .social-box {
     gap: 16px;
@@ -345,18 +374,18 @@ address {
     background-color: #31d0aa;
 }
 .cont-for-form {
-    margin-left: 80px;
 
 }
 .subscribe-section {
-    display: flex;
+    display: flex-wrap;
     gap: 24px;
-    align-items: flex-end;
+    align-items: center;
 
 }
 .footer-mail {
-    width: 264px;
+    width: 100%;
     height: 40px;
+    margin-bottom: 16px;
     border-radius: 4px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -396,6 +425,7 @@ address {
     background: #4D5AE5;
     color: #ffffff;
     cursor: pointer;
+    margin: auto;
 }
 .footer-button:hover{
     background-color: #404BBF;
