@@ -176,13 +176,18 @@ address {
     background-color: #2e2f42;
     text-align: center;
     padding: 72px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-mob-x1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     max-width: 320px;
     height: 432px;
     margin: auto;
+}
+@media (min-resolution: 192dpi){
+    .hero-image {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-mob-x1.jpg);
+    }
 }
 .slogan {
     font-size: 36px;
@@ -228,6 +233,8 @@ address {
     display: flex;
     flex-direction: column;
     gap: 72px 0;
+    max-width: 288px;
+    margin: 0 auto;
 }
 .visually-hidden {
     position: absolute;
@@ -243,7 +250,7 @@ address {
     overflow: hidden;
 }
 .feature {
-    width: 100%;
+    width: 288px;
     
 }
 
@@ -384,6 +391,10 @@ address {
     position: relative;
     overflow: hidden; 
 }
+.port-img{
+    width: 288px;
+    height: 280px;
+}
 .image-text {
     position: absolute;
     top: 0;
@@ -435,8 +446,7 @@ address {
     text-align: center;
     margin-top: 72px;
 }
-.social-media-box {
-}
+
 .social-media-box > .social-box {
     gap: 16px;
 }
@@ -449,7 +459,6 @@ address {
     margin: 0;
     gap: 40px;
 }
-.cont-for-form {}
 .subscribe-section {
     display: flex;
     flex-direction: column;
@@ -730,6 +739,13 @@ address {
     .hero-image {
         max-width: 100%;
         padding: 112px 136px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-tab-x1.jpg);
+    }
+    @media (min-resolution: 192dpi){
+        .hero-image{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-tab-x2.jpg);
+
+        }
     }
     .slogan {
         max-width: 496px;
@@ -760,6 +776,10 @@ address {
     }
     .portfolio-element {
         max-width: 356px;
+    }
+    .port-img {
+        width: 356px;
+        height: 300px;
     }
     .team-list {
         flex-direction: row;
@@ -843,6 +863,12 @@ address {
         max-width: 100%;
         padding: 188px 0;
         height: auto;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-desk-x1.jpg);
+    }
+    @media (min-resolution: 192dpi){
+        .hero-image{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-tab-x2.jpg);
+        }
     }
     .slogan {
         max-width: 496px;
@@ -860,6 +886,7 @@ address {
         display: flex;
     }
     .features {
+        max-width: 1128px;
         flex-direction: row;
         gap: 24px;
     }
@@ -880,6 +907,10 @@ address {
     }
     .portfolio-element {
         max-width: 360px;
+    }
+    .port-img {
+        width: 360px;
+        height: 300px;
     }
    .footer {
     padding: 100px 16px 100px 16px;
