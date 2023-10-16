@@ -223,6 +223,7 @@ address {
 .section-one {
     padding: 96px 16px;
 }
+
 .features {
     display: flex;
     flex-direction: column;
@@ -303,10 +304,15 @@ address {
 .team-list, .portfolio-list {
     
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 24px;
+    margin: 0 auto;
     text-align: center;
     justify-content: center;
+}
+.team-list {
+    max-width: 264px;
 }
 .name-and-spec {
     padding: 32px 0;
@@ -317,6 +323,7 @@ address {
 }
  
 .team-mem {
+    width: 264px;
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -350,7 +357,7 @@ address {
     fill: #F4F4FD;
 }
 .portfolio-list {
-    flex-wrap: wrap;
+    max-width: 288px;
     row-gap: 48px;
 }
 .project-card {
@@ -412,6 +419,7 @@ address {
     letter-spacing: 0.02em;
     width: 264px;
    text-align: left;
+   margin: 0 auto;
 }
 .footer-logo-studio {
     color: #f4f4fd;
@@ -441,15 +449,19 @@ address {
     margin: 0;
     gap: 40px;
 }
-
+.cont-for-form {}
 .subscribe-section {
-    display: flex-wrap;
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 
 }
+.subscribe-label {
+    margin: 0 auto;
+}
 .footer-mail {
-    width: 100%;
+    width: 288px;
     height: 40px;
     margin-bottom: 16px;
     border-radius: 4px;
@@ -689,7 +701,7 @@ address {
 .modal-form > .button {
     margin: 0 auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width:1157px) {
     .mobile-menu-button {
         display: none;
     }
@@ -728,6 +740,8 @@ address {
         margin: 36px auto 0;
     }
     .features {
+        max-width: 736px;
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -740,8 +754,17 @@ address {
     .benefit {
         text-align: left;
     }
+    .portfolio-list {
+        max-width: 754px;
+        flex-direction: row;
+    }
     .portfolio-element {
         max-width: 356px;
+    }
+    .team-list {
+        flex-direction: row;
+        max-width: 552px;
+        margin: 0 auto;
     }
     .footer {
         padding: 96px 108px;
@@ -750,17 +773,21 @@ address {
         text-align: left;
      }
      .footer > .container {
+        max-width: 496px;
+        margin: 0 auto;
         flex-direction: row;
+        column-gap: 24px;
         flex-wrap: wrap;
-        gap: 24px;
-
+     }
+     .cont-for-form {
+        max-width: 100%;
      }
      .footer-social-media {
         margin-top: 0;
         text-align: left;
      }
      .subscribe-section {
-        display: flex;
+        flex-direction: row;
         gap: 24px;
      }
      .subscribe-text {
@@ -782,10 +809,25 @@ address {
      }
 }
 @media (min-width: 1158px) {
+    .mobile-menu-button {
+        display: none;
+    }
+    .menu, .contacts {
+        display: flex;
+    }
+    .top-line > .container {
+        padding: 0 16px;
+    }
+    .nav-menu {
+        font-size: 16px;
+        padding: 24px 0;
+    }
     .logo {
+        margin-right: 76px;
         margin-left: 156px;
     }
     .address {
+        margin-right: 156px;
         padding-top: 24px;
         padding-bottom: 24px;
     }
@@ -798,8 +840,15 @@ address {
         font-size: 16px;
     }
     .hero-image {
+        max-width: 100%;
         padding: 188px 0;
         height: auto;
+    }
+    .slogan {
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 60px;
+        letter-spacing: 1.12px;
     }
     .hero-cont > .button {
         margin: 48px auto 0;
@@ -810,11 +859,55 @@ address {
     .ben-box {
         display: flex;
     }
+    .features {
+        flex-direction: row;
+        gap: 24px;
+    }
     .feature {
         width: calc((100% - 72px)/4);
     }
     .team-section>.container {
         padding: 120px 0;
     }
-   
+    .team-list {
+        max-width: 1128px;
+        flex-direction: row;
+    }
+    .portfolio-list {
+        flex-direction: row;
+        max-width: 1128px;
+        margin: 0 auto;
+    }
+    .portfolio-element {
+        max-width: 360px;
+    }
+   .footer {
+    padding: 100px 16px 100px 16px;
+   }
+   .footer > .container {
+    flex-direction: row;
+    justify-content: space-around;
+   }
+   .logo-container {
+    text-align: left;
+    
+   }
+   .footer-logo {
+    margin: 0 0 16px 0;
+   }
+   /* .social-media-box {
+    margin-left: 120px;
+    margin-right: 80px;
+   } */
+   .subscribe-text, .footer-social-media {
+    margin-top: 0;
+    text-align: left;
+   }
+  .subscribe-section {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .footer-mail {
+    margin: 0;
+  }
 }
