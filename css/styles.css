@@ -910,4 +910,10 @@ address {
   .footer-mail {
     margin: 0;
   }
+  .modal {
+    width: 408px;
+  }
+  .check {
+    width: 16px;
+  }
 }
