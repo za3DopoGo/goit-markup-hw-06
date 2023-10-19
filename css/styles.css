@@ -126,6 +126,13 @@ address {
     visibility: hidden;
     pointer-events: none;
 }
+.mobile-submenu {
+    height: calc(100% - 88px);
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .mob-menu {
     font-size: 36px;
     font-style: normal;
@@ -138,13 +145,7 @@ address {
     gap: 40px;    
     
 }
-.mobile-submenu {
-    height: calc(100% - 40px);
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 .mob-menu-el {
     color: #2E2F42;
 }
@@ -152,9 +153,9 @@ address {
 .active-page-mob {
     color: #404BBF;
 }
-.mobile-address {
+/* .mobile-address {
     margin-bottom: 48px;
-}
+} */
 .mobile-contacts {
     margin-top: auto;
     display: flex;
@@ -226,7 +227,10 @@ address {
 }
 
 .section-one {
-    padding: 96px 16px;
+    padding: 96px 0;
+}
+.section-one > .container {
+    padding: 0 16px;
 }
 
 .features {
@@ -266,8 +270,25 @@ address {
     border-radius: 4px;
     margin-bottom: 8px;
 }
-.benefit, .team-member-name, .project-card {
-    color: var(--NAVY-BLUE, #2E2F42);
+.benefit {
+    color: #2E2F42;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; 
+    letter-spacing: 0.72px;
+}
+.description{
+    color: #434455;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px
+}
+.team-member-name, .project-card {
+        color: #2E2F42;
         text-align: center;
         font-size: 20px;
         font-style: normal;
@@ -275,12 +296,12 @@ address {
         line-height: 24px;
         letter-spacing: 0.4px;
         text-transform: capitalize;
-    margin-bottom: 8px;
+        margin-bottom: 8px;
 }
-.description, .specialty, .type-of-project {
+.specialty, .type-of-project {
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.32px;
 }
@@ -290,19 +311,19 @@ address {
 .team-section {
     background-color: #f4f4fd;
     text-align: center;
-    padding: 0;
+    padding: 96px 0;
 }
 .team-section > .container, .portfolio-sec > .container{
     text-align: center;
 }
-.team-section>.container {
-    padding: 96px 28px;
+.team-section > .container {
+    padding: 0 28px;
 }
 
 .title-sec {
     font-size: 36px;
     line-height: 1.11;
-    
+    font-weight: 700;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
@@ -330,7 +351,7 @@ address {
 }
  
 .team-mem {
-    width: 264px;
+    max-width: 264px;
     background-color: #FFFFFF;
     border-radius: 0px 0px 4px 4px;
     box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -362,6 +383,12 @@ address {
 }
 .social-icon {
     fill: #F4F4FD;
+}
+.portfolio-sec {
+    padding: 96px 0;
+}
+.portfolio-sec > .container {
+    padding: 0 16px;
 }
 .portfolio-list {
     max-width: 288px;
@@ -412,11 +439,13 @@ address {
 }
 .footer{
     background-color: #2e2f42;
-    padding: 96px 16px;
+    padding: 96px 0;
 }
 .footer > .container {
     display: flex;
     flex-direction: column;
+    padding: 0 16px;
+    gap: 72px;
 }
 .logo-container {
    text-align: center;
@@ -425,6 +454,7 @@ address {
     margin: 0 auto 16px auto;
 }
 .footer-parag {
+    font-size: 16px;
     line-height: 1.5;
     color: #f4f4fd;
     letter-spacing: 0.02em;
@@ -444,7 +474,6 @@ address {
     color: #FFFFFF;
     margin-bottom: 16px;
     text-align: center;
-    margin-top: 72px;
 }
 
 .social-media-box > .social-box {
@@ -456,14 +485,16 @@ address {
 }
 .mob-social-box {
     position: static;
-    margin: 0;
+    margin-top: 48px;
     gap: 40px;
+    justify-content: flex-start;
 }
 .subscribe-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 16px;
 
 }
 .subscribe-label {
@@ -472,7 +503,6 @@ address {
 .footer-mail {
     width: 288px;
     height: 40px;
-    margin-bottom: 16px;
     border-radius: 4px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -787,17 +817,23 @@ address {
         margin: 0 auto;
     }
     .footer {
-        padding: 96px 108px;
+        padding: 96px 0;
     }
-    .logo-container {
-        text-align: left;
-     }
+    
      .footer > .container {
-        max-width: 496px;
-        margin: 0 auto;
+        max-width: 768px;
         flex-direction: row;
         column-gap: 24px;
         flex-wrap: wrap;
+        padding: 0px 108px;
+        margin: 0 auto;
+        /* justify-content: center; */
+     }
+     .logo-container {
+        text-align: left;
+     }
+     .social-box {
+        margin-top: 0;
      }
      .cont-for-form {
         max-width: 100%;
@@ -836,7 +872,8 @@ address {
         display: flex;
     }
     .top-line > .container {
-        padding: 0 16px;
+        padding: 0;
+        max-width: 1440px;
     }
     .nav-menu {
         font-size: 16px;
@@ -860,7 +897,7 @@ address {
         font-size: 16px;
     }
     .hero-image {
-        max-width: 100%;
+        max-width: 1440px;
         padding: 188px 0;
         height: auto;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background-desk-x1.jpg);
@@ -880,7 +917,11 @@ address {
         margin: 48px auto 0;
     }
     .section-one {
-        padding: 120px 156px;
+        padding: 120px 0;
+    }
+    .section-one > .container {
+        max-width: 1158px;
+        padding: 0;
     }
     .ben-box {
         display: flex;
@@ -893,12 +934,34 @@ address {
     .feature {
         width: calc((100% - 72px)/4);
     }
-    .team-section>.container {
+    .benefit {
+        color: var(--NAVY-BLUE, #2E2F42);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 120% */
+        letter-spacing: 0.4px;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .description {
+        font-weight: 400;
+    }
+    .team-section {
         padding: 120px 0;
     }
+    .team-section>.container {
+        padding: 0;
+    }
     .team-list {
-        max-width: 1128px;
+        max-width: 100%;
         flex-direction: row;
+    }
+    .portfolio-sec {
+        padding: 120px 0;
+    }
+    .portfolio-sec > .container {
+        padding: 0;
     }
     .portfolio-list {
         flex-direction: row;
@@ -913,23 +976,24 @@ address {
         height: 300px;
     }
    .footer {
-    padding: 100px 16px 100px 16px;
+    padding: 100px 0;
    }
    .footer > .container {
+    max-width: 1440px;
     flex-direction: row;
-    justify-content: space-around;
+    padding-left: 156px;
+    gap: 0;
    }
    .logo-container {
     text-align: left;
-    
+    margin-right: 120px;    
    }
    .footer-logo {
     margin: 0 0 16px 0;
    }
-   /* .social-media-box {
-    margin-left: 120px;
+   .social-media-box {
     margin-right: 80px;
-   } */
+   }
    .subscribe-text, .footer-social-media {
     margin-top: 0;
     text-align: left;
@@ -940,6 +1004,7 @@ address {
   }
   .footer-mail {
     margin: 0;
+    width: 264px;
   }
   .modal {
     width: 408px;
